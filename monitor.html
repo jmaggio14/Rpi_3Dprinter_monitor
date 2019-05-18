@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>APLAB 3D printer!</title>
+    <meta property="og:url" content="https://www.jeffmagg.io/monitor.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="APLAB 3D printer!" />
+    <meta property="og:image" content="img/aplab/3Dprinter.png" />
+    <link rel="icon" href="data:,">
+
+  <link href="https://www.jeffmagg.io/css/simplex.min.css" rel="stylesheet">
+  </head>
+
+
+<body>
+
+  <div class="container" role="main">
+  <!-- header image -->
+    <div class="page-header">
+      <div class="row text-center">
+        <div class="col-md-offset-2 col-md-8">
+          <h1><b>APLAB 3D printer</b></h1>
+          <h2 id='update-time'></h2>
+          <div class="span4"><img id="3d-printer" src="img/aplab/3Dprinter.png" height="500" /></div>
+        </div>
+      </div>
+    </div>
+   </div>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script type="text/javascript">
+     function update(){
+       var d = new Date()
+       $("#update-time").text("Last Updated on " + d.toString());
+       $("#3d-printer").src = "img/aplab/3Dprinter.png?t=" + d.getTime();
+      }
+     update();
+     setInterval(update,2000);
+
+   </script>
+</body>
+</html>
